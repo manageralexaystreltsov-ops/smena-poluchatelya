@@ -558,7 +558,7 @@
           <form id="transfer-form" novalidate>
             <label for="amount">Введите сумму</label>
             <div class="amount-wrap">
-              <span class="currency">$</span>
+              <span class="currency">₸</span>
               <input
                 id="amount"
                 name="amount"
@@ -615,11 +615,11 @@
                 </div>
               </div>
               <div class="coins">
-                <div class="coin">$</div>
-                <div class="coin">$</div>
-                <div class="coin">$</div>
-                <div class="coin">$</div>
-                <div class="coin">$</div>
+                <div class="coin">₸</div>
+                <div class="coin">₸</div>
+                <div class="coin">₸</div>
+                <div class="coin">₸</div>
+                <div class="coin">₸</div>
               </div>
             </div>
 
@@ -638,7 +638,7 @@
               </svg>
             </div>
             <h2>Перевод денег подтверждён</h2>
-            <div class="amount-done" id="done-amount">$0.00</div>
+            <div class="amount-done" id="done-amount">0 ₸</div>
             <p>
               Смена получателя завершена успешно.
               Спасибо — нам было приятно с вами сотрудничать.
@@ -693,10 +693,11 @@
       }
 
       function formatMoney(value) {
-        return new Intl.NumberFormat("en-US", {
+        return new Intl.NumberFormat("ru-KZ", {
           style: "currency",
-          currency: "USD",
-          minimumFractionDigits: 2,
+          currency: "KZT",
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2,
         }).format(value);
       }
 
